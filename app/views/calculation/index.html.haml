@@ -1,0 +1,38 @@
+%div.margin_top_3.container_form
+  = form_tag calculate_path do
+    .form-group
+      .div
+        = label_tag "Größe [m.cm]:"
+      .div
+        = number_field_tag :hight, :amount, step: :any, class:"width_100"
+    .form-group
+      .div
+        = label_tag "Gewicht [kg.g]:"
+      .div
+        = number_field_tag :weight, :amount, step: :any, class:"width_100"
+    .form-group
+      .div
+        = label_tag "körperliche Aktivität"
+      .div
+        = select_tag :activity, options_for_select([["Ausschließlich sitzende oder liegende Lebensweise",2],
+                                                    ["Ausschließlich sitzende oder liegende Lebensweise mit minimaler Bewegung",3],
+                                                    ["Ausschließlich sitzende Tätigkeit",4],
+                                                    ["Ausschließlich sitzende Tätigkeit mit wenig anstrengender Freizeitaktivität",5],
+                                                    ["Leichte körperliche Arbeit",6],
+                                                    ["Leichte körperliche Arbeit mit wenig anstrengender Freizeitaktivität",7],
+                                                    ["Überwiegend gehende oder stehende Arbeit",8],
+                                                    ["Überwiegend gehende oder stehende Arbeit mit wenig anstrengender Freizeitaktivität",9],
+                                                    ["Körperlich anstrengende berüfliche Arbeit",10],
+                                                    ["Körperlich anstrengende berufliche Arbeit mit wenig anstrengende Freizeitaktivität oder Leistungssportler/Hobbyathleten",11]]), class:"width_100"
+    .form-group
+      .div
+        = label_tag "Alter [Jahre]:"
+      .divq
+        = number_field_tag :age, {}, class:"width_100"
+    .form-group.text-center
+      = radio_button_tag :gender, "male"
+      = label_tag "Männlich"
+      = radio_button_tag :gender, 'female'
+      = label_tag "Weiblich"
+    .div.text-center
+      = submit_tag "Berechnen", class: "btn btn-primary margin_bottom_3"

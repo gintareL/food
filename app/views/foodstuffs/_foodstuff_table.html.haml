@@ -1,0 +1,75 @@
+#filterrific_results
+
+  %table.table.table-striped.width_100.table-responsive.table-hover.table-fw-widget
+    %tbody{style:"overflow: auto;"}
+      %tr
+        %th Nahrungsmittel:
+        %td Kategorie
+        %td.background_energy= filterrific_sorting_link(@filterrific, :kcal)
+        %td.background_energy= filterrific_sorting_link(@filterrific, :kj)
+        %td.background_energy= filterrific_sorting_link(@filterrific, :density)
+        %td.background_protein Eiweiß (g)
+        %td.background_fat ges. Fett (g)
+        %td.background_fat GFS Fett (g)
+        %td.background_fat EUFS Fett (g)
+        %td.background_fat MUFS Fett (g)
+        %td.background_fat Chol. Fett (mg)
+        %td.background_carb ges. Kohlenhyd.  (g)
+        %td.background_carb Mono-, Disaccharide (g)
+        %td.background_carb Polysaccharide (g)
+        %td.background_carb Ballaststoffe (g)
+        %td.background_lightskyblue NaCl (mg)
+        %td.background_darkseagreen Wasser
+        %td.background_minarals Na (mg)
+        %td.background_minarals K (mg)
+        %td.background_minarals Ca (mg)
+        %td.background_minarals Mg (mg)
+        %td.background_minarals P (mg)
+        %td.background_minarals Fe (mg)
+        %td.background_minarals Zn (mg)
+        %td.background_vitamins Ret
+        %td.background_vitamins Caro
+        %td.background_vitamins E (mg)
+        %td.background_vitamins B1 (mg)
+        %td.background_vitamins B2 (mg)
+        %td.background_vitamins B6 (mg)
+        %td.background_vitamins B12
+        %td.background_vitamins Fol
+        %td.background_vitamins C (mg)
+        %td erstellt am:
+      - food.each do |f|
+        %tr
+          %th= link_to f.name, foodstuffs_path(f)
+          %td= f.category.category
+          %td.background_energy= f.kcal
+          %td.background_energy= f.kj
+          %td.background_energy= f.density
+          %td.background_protein= f.protein
+          %td.background_fat= f.fat_ges
+          %td.background_fat= f.fat_gfs
+          %td.background_fat= f.fat_eufs
+          %td.background_fat= f.fat_mufs
+          %td.background_fat= f.fat_chol
+          %td.background_carb= f.carb_ges
+          %td.background_carb= f.carb_mono_di
+          %td.background_carb= f.carb_poly
+          %td.background_carb= f.carb_ball
+          %td.background_lightskyblue= f.na_cl
+          %td.background_darkseagreen= f.water
+          %td.background_minarals= f.na
+          %td.background_minarals= f.k
+          %td.background_minarals= f.ca
+          %td.background_minarals= f.mg
+          %td.background_minarals= f.p
+          %td.background_minarals= f.fe
+          %td.background_minarals= f.zn
+          %td.background_vitamins= f.ret
+          %td.background_vitamins= f.caro
+          %td.background_vitamins= f.e
+          %td.background_vitamins= f.b_1
+          %td.background_vitamins= f.b_2
+          %td.background_vitamins= f.b_6
+          %td.background_vitamins= f.b_12
+          %td.background_vitamins= f.fol
+          %td.background_vitamins= f.c
+          %td= f.created_at.strftime("%F %T")

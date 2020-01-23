@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %title Food
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .container
+      %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        %a.navbar-brand{:href => "#"} FOODI
+        %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+          %span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          %ul.navbar-nav.mr-auto
+            %li.nav-item.active
+              %a.nav-link{:href => root_path}
+                Home
+                %span.sr-only (current)
+            %li.nav-item
+              %a.nav-link{:href => new_foodstuffs_path} Nahrungsmittel hinzufügen
+            %li.nav-item
+              %a.nav-link{:href => calculation_path} Berechnungen
+
+      -flash.each do |key,value|
+        %div{class: "alert alert-#{key}"}= value
+      = yield

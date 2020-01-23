@@ -1,0 +1,12 @@
+%div.margin_top_3
+
+  %h4 Nahrungsmittel
+
+%div.filter
+  = form_for_filterrific @filterrific do |f|
+    %div
+      = f.text_field(:search_name, class: 'filterrific-periodically-observed', placeholder: 'Nahrungsmittel...' )
+      = f.select(:search_category, options_for_select(Category.all.pluck(:category)), { include_blank: '- Kategorie -' })
+      = f.submit 'Suchen'
+%div.margin_top_3
+  = render partial: 'foodstuff_table', locals: {food: @food}

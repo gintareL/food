@@ -1,0 +1,51 @@
+.div= link_to 'edit', edit_foodstuffs_path(@food), class: "btn btn-primary margin_top_3 margin_bottom_3 margin_left_right_1"
+%h4= @food.name
+.div.border.border-secondary.margin_top_3.padding_3.margin_left_right_1.width_48.fload_left
+    .div= "Kategorie #{@food.category.category}"
+    .div= "Portion (g): #{@food.portion}"
+    .div= "NaCl (mg): #{@food.na_cl}"
+    .div= "Wasser (g): #{@food.water}"
+
+.div.border.border-secondary.margin_top_3.width_48.margin_left_right_1.fload_left.padding_3.background_energy
+    .div Energie
+    .div= "kcal pro 100g: #{@food.kcal}"
+    .div= "kJ pro 100g: #{@food.kj}"
+    .div= "Dichte pro 100g: #{@food.density}"
+.div.border.border-secondary.margin_top_3.width_29.margin_left_right_1.fload_left.padding_3.background_protein.height_250
+    %p Eiweiß
+    .div= "Eiweiß (in g) pro 100g: #{@food.protein}"
+.div.border.border-secondary.margin_top_3.width_31.margin_left_right_1.fload_left.padding_3.background_fat.height_250
+    %p Fett
+    .div= "ges. Fett (in g) pro 100g: #{@food.fat_ges}"
+    .div= "GFS Fett (in g) pro 100g: #{@food.fat_gfs}"
+    .div= "EUFS Fett (in g) pro 100g: #{@food.fat_eufs}"
+    .div= "MUFS Fett (in g) pro 100g: #{@food.fat_mufs}"
+    .div= "Chol. Fett (in mg) pro 100g: #{@food.fat_chol}"
+.div.border.border-secondary.margin_top_3.width_34.margin_left_right_1.fload_left.padding_1.background_carb.height_250
+    %p Kohlenhydrate
+    .div= "ges. Kohlenhydrate (in g) pro 100g: #{@food.carb_ges}"
+    .div= "Mono- / Disaccharide (in g) pro 100g: #{@food.carb_mono_di}"
+    .div= "Polysaccharide (in g) pro 100g: #{@food.carb_poly}"
+    .div= "Ballaststoffe (in g) pro 100g: #{@food.carb_ball}"
+.div.border.border-secondary.margin_top_3.width_48.fload_left.padding_3.margin_right_3.background_minarals.height_300
+    %p Mineralstoffe
+    .div= "Na (in mg) pro 100g: #{@food.na}"
+    .div= "K (in mg) pro 100g: #{@food.k}"
+    .div= "Ca (in mg) pro 100g: #{@food.ca}"
+    .div= "Mg (in mg) pro 100g: #{@food.mg}"
+    .div= "P (in mg) pro 100g: #{@food.p}"
+    .div= "Fe (in mg) pro 100g: #{@food.fe}"
+    .div= "Zn (in mg) pro 100g: #{@food.zn}"
+.div.border.border-secondary.margin_top_3.width_48.fload_left.padding_3.background_vitamins.height_300
+    %p Vitamine
+    .div= "Ret (in mikrog) pro 100g: #{@food.ret}"
+    .div= "Caro. (in mikrog) pro 100g: #{@food.caro}"
+    .div= "E (in mg) pro 100g: #{@food.e}"
+    .div= "B 1 (in mg) pro 100g: #{@food.b_1}"
+    .div= "B 2 (in mg) pro 100g: #{@food.b_2}"
+    .div= "B 6 (in mg) pro 100g: #{@food.b_6}"
+    .div= "B 12 (in mikrog) pro 100g: #{@food.b_12}"
+    .div= "Fol. (in mikrog) pro 100g: #{@food.fol}"
+    .div= "C (in mg) pro 100g: #{@food.c}"
+
+.div= link_to 'zurück', root_path, class: "btn btn-close margin_top_3 margin_bottom_3 margin_left_right_1"

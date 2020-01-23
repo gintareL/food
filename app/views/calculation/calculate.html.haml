@@ -1,0 +1,27 @@
+.div.margin_top_3
+  .div.border.border-secondary.margin_top_3.width_48.fload_left.padding_3.margin_right_3
+    .div
+      = "Größe: #{@hight} m"
+    .div
+      = "Gewicht: #{@weight} kg"
+    .div
+      = "Alter: #{@age} Jahre"
+  .div.border.border-secondary.margin_top_3.width_48.fload_left.padding_3
+    -if check_bmi(@bmi) == "green"
+      .div
+        = "BMI: #{@bmi}"
+        %span.dot_green
+    -elsif check_bmi(@bmi) == "yellow"
+      .div
+        = "BMI: #{@bmi}"
+        %span.dot_yellow
+    -else
+      .div
+        = "BMI: #{@bmi}"
+        %span.dot_red
+    .div
+      = "Ruheenergieverbrauch: #{@ruheenergieverbrauch}"
+    .div
+      = "Empfohlener täglicher Energiebedarf kcal: #{@total_kcal}"
+.div
+  =image_tag("organic.jpg", width: '100%')

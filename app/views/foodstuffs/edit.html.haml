@@ -1,0 +1,121 @@
+%div.margin_top_3
+  = form_for @food, url: {action: "update"} do |f|
+    .div.border.border-secondary.margin_top_3.padding_3.margin_left_right_1.width_48.fload_left.height_500
+      =f.hidden_field :id
+      .form-group
+        = f.label :name, "Name"
+        = f.text_field :name, class: "form-control"
+      .form-group
+        = f.label :category, "Kategory"
+        = f.select :category, options_for_select(Category.all.map{|c| [c.category, c.id]}, @food.category_id), {}, class: "form-control"
+      .form-group
+        = f.label :portion, "Portion (g):"
+        = f.text_field :portion, class: "form-control"
+      .form-group
+        = f.label :na_cl, "NaCl (mg):"
+        = f.text_field :na_cl, class: "form-control"
+      .form-group
+        = f.label :water, "Wasser (g):"
+        = f.text_field :water, class: "form-control"
+    .div.border.border-secondary.margin_top_3.padding_3.margin_left_right_1.width_48.fload_left.height_500
+      %h5 Energie
+      .form-group
+        = f.label :kcal, "kcal pro 100g:"
+        = f.text_field :kcal, class: "form-control"
+      .form-group
+        = f.label :kj, "kJ pro 100g:"
+        = f.text_field :kj, class: "form-control"
+      .form-group
+        = f.label :density, "Dichte pro 100g:"
+        = f.text_field :density, class: "form-control"
+    .div.border.border-secondary.margin_top_3.width_29.margin_left_right_1.fload_left.padding_3.background_protein.height_500
+      %h5 Eiweiß
+      .form-group
+        = f.label :protein, "Eiweiß (in g) pro 100g:"
+        = f.text_field :protein, class: "form-control"
+    .div.border.border-secondary.margin_top_3.width_31.margin_left_right_1.fload_left.padding_3.background_fat.height_500
+      %h5 Fett
+      .form-group
+        = f.label :fat_ges, "ges. Fett (in g) pro 100g:"
+        = f.text_field :fat_ges, class: "form-control"
+      .form-group
+        = f.label :fat_gfs, "GFS Fett (in g) pro 100g:"
+        = f.text_field :fat_gfs, class: "form-control"
+      .form-group
+        = f.label :fat_eufs, "EUFS Fett (in g) pro 100g:"
+        = f.text_field :fat_eufs, class: "form-control"
+      .form-group
+        = f.label :fat_mufs, "MUFS Fett (in g) pro 100g:"
+        = f.text_field :fat_mufs, class: "form-control"
+      .form-group
+        = f.label :fat_chol, "Chol. Fett (in mg) pro 100g:"
+        = f.text_field :fat_chol, class: "form-control"
+    .div.border.border-secondary.margin_top_3.width_34.margin_left_right_1.fload_left.padding_1.background_carb.height_500
+      %h5 Kohlenhydrate
+      .form-group
+        = f.label :carb_ges, "ges. Kohlenhydrate (in g) pro 100g:"
+        = f.text_field :carb_ges, class: "form-control"
+      .form-group
+        = f.label :carb_mono_di, "Mono- / Disaccharide (in g) pro 100g:"
+        = f.text_field :carb_mono_di, class: "form-control"
+      .form-group
+        = f.label :carb_poly, "Polysaccharide (in g) pro 100g:"
+        = f.text_field :carb_poly, class: "form-control"
+      .form-group
+        = f.label :carb_ball, "Ballaststoffe (in g) pro 100g:"
+        = f.text_field :carb_ball, class: "form-control"
+    .div.border.border-secondary.margin_top_3.width_48.fload_left.padding_3.margin_right_3.margin_left_right_1.background_minarals.height_850
+
+      %h4 Mineralstoffe
+      .form-group
+        = f.label :na, "Na (in mg) pro 100g:"
+        = f.text_field :na, class: "form-control"
+      .form-group
+        = f.label :k, "K (in mg) pro 100g:"
+        = f.text_field :k, class: "form-control"
+      .form-group
+        = f.label :ca, "Ca (in mg) pro 100g:"
+        = f.text_field :ca, class: "form-control"
+      .form-group
+        = f.label :mg, "Mg (in mg) pro 100g:"
+        = f.text_field :mg, class: "form-control"
+      .form-group
+        = f.label :p, "P (in mg) pro 100g:"
+        = f.text_field :p, class: "form-control"
+      .form-group
+        = f.label :fe, "Fe (in mg) pro 100g:"
+        = f.text_field :fe, class: "form-control"
+      .form-group
+        = f.label :zn, "Zn (in mg) pro 100g:"
+        = f.text_field :zn, class: "form-control"
+    .div.border.border-secondary.margin_top_3.width_48.fload_left.padding_3.background_vitamins.height_850
+      %h4 Vitamine
+      .form-group
+        = f.label :ret, "Ret (in mikrog) pro 100g:"
+        = f.text_field :ret, class: "form-control"
+      .form-group
+        = f.label :caro, "Caro. (in mikrog) pro 100g:"
+        = f.text_field :caro, class: "form-control"
+      .form-group
+        = f.label :e, "E (in mg) pro 100g:"
+        = f.text_field :e, class: "form-control"
+      .form-group
+        = f.label :b_1, "B 1 (in mg) pro 100g:"
+        = f.text_field :b_1, class: "form-control"
+      .form-group
+        = f.label :b_2, "B 2 (in mg) pro 100g:"
+        = f.text_field :b_2, class: "form-control"
+      .form-group
+        = f.label :b_6, "B 6 (in mg) pro 100g:"
+        = f.text_field :b_6, class: "form-control"
+      .form-group
+        = f.label :b_12, "B 12 (in mikrog) pro 100g:"
+        = f.text_field :b_12, class: "form-control"
+      .form-group
+        = f.label :fol, "Fol. (in mikrog) pro 100g:"
+        = f.text_field :fol, class: "form-control"
+      .form-group
+        = f.label :c, "C (in mg) pro 100g:"
+        = f.text_field :c, class: "form-control"
+    .div.clearing
+      = f.submit 'speichern', class: "btn btn-primary margin_bottom_3 margin_top_3"
