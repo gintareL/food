@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b112b53-7d65-42ee-acc9-8c3ee5b8af83" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/foodstuffs/_foodstuff_table.html.haml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/foodstuffs/index.html.haml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/foodstuffs/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/foodstuffs/new.html.haml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/foodstuffs/show.html.haml" afterDir="false" />
-    </list>
+    <list default="true" id="0b112b53-7d65-42ee-acc9-8c3ee5b8af83" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,12 +181,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:MySQL - food_db@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -211,6 +200,7 @@
       <option name="presentableId" value="Default" />
       <updated>1576773001643</updated>
       <workItem from="1576773004823" duration="58815000" />
+      <workItem from="1580234675558" duration="5000" />
     </task>
     <servers />
   </component>
